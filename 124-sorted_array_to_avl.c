@@ -1,40 +1,48 @@
 #include "binary_trees.h"
+
 /**
- * aux_sort - create the tree using the half element of the array
- * @parent: parent of the node to create
- * @array: sorted array
- * @begin: position where the array starts
- * @last: position where the array ends
- * Return: tree created
+ * sorted_array_to_avl_revursive - recursive array to avl
+ *
+ * @array: pointer to array
+ * @first_index: sub array initial index
+ * @final_index: sub array end index
+ * Return: pointer to root
  */
-avl_t *aux_sort(avl_t *parent, int *array, int begin, int last)
+avl_t *sorted_array_to_avl_revursive(int *array, int first_index,
+int final_index)
 {
 	avl_t *root;
-	binary_tree_t *aux;
-	int mid = 0;
+	int half;
 
-	if (begin <= last)
-	{
-		mid = (begin + last) / 2;
-		aux = binary_tree_node((binary_tree_t *)parent, array[mid]);
-		if (aux == NULL)
-			return (NULL);
-		root = (avl_t *)aux;
-		root->left = aux_sort(root, array, begin, mid - 1);
-		root->right = aux_sort(root, array, mid + 1, last);
-		return (root);
-	}
-	return (NULL);
+	if (final_index < first_index)
+		return (NULL);
+
+	half = (final_index + first_index) / 2;
+	/* creation of binary tree with root = half */
+	root = binary_tree_node(NULL, array[half]);
+	if (!root)
+		return (NULL);
+	/* sort each branch */
+	root->left = sorted_array_to_avl_revursive(array, first_index, half - 1);
+	root->right = sorted_array_to_avl_revursive(array, half + 1, final_index);
+	if (root->left)
+		root->left->parent = root;
+	if (root->right)
+		root->right->parent = root;
+	return (root);
 }
+
 /**
- * sorted_array_to_avl - create a alv tree from sorted array
- * @array: sorted array
- * @size: size of the sorted array
- * Return: alv tree form sorted array
+ * sorted_array_to_avl - builds an AVL tree from an array
+ *
+ * @array: pointer to the first element of the array to be converted
+ * @size: number of element in the array
+ * Return: pointer to the root node of the created AVL tree
+ * or NULL on failure
  */
 avl_t *sorted_array_to_avl(int *array, size_t size)
 {
-	if (array == NULL || size == 0)
+	if (!array || size < 1)
 		return (NULL);
-	return (aux_sort(NULL, array, 0, ((int)(size)) - 1));
+	return (sorted_array_to_avl_revursive(array, 0, size - 1));
 }
