@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * btl - auxiliary level
+ * btl - btl level
  *
- * @tree: pointer to root
- * Return: integer with level
+ * @tree: pointer to tree root
+ * Return: integer
  */
 
 int btl(const binary_tree_t *tree)
@@ -25,10 +25,10 @@ int btl(const binary_tree_t *tree)
 
 
 /**
- * bt_balance - factor calculate
+ * bt_balance - bt balance
  *
- * @tree: pointer to root
- * Return: integer with factor
+ * @tree: pointer to tree root
+ * Return: integer
  */
 
 int bt_balance(const binary_tree_t *tree)
@@ -40,11 +40,11 @@ int bt_balance(const binary_tree_t *tree)
 }
 
 /**
- * bavl - Check level
+ * bavl - bavl level
  *
- * @tree: pointer to root
- * @min: min value
- * @max: max value
+ * @tree: pointer to tree root
+ * @min: min
+ * @max: max
  * Return: 1 if is AVL, 0 otherwise
  */
 
@@ -67,10 +67,10 @@ int bavl(const binary_tree_t *tree, int min, int max)
 }
 
 /**
- * binary_tree_is_avl - checks if a binary tree is a valid AVL Tree
- * @tree: pointer to the root node of the tree to check
+ * binary_tree_is_avl - tree avl
+ * @tree: pointer to the tree root
  *
- * Return: 1 if tree is a valid AVL Tree, and 0 otherwise
+ * Return: 1 if tree is a valid AVL, and 0 otherwise
  */
 int binary_tree_is_avl(const binary_tree_t *tree)
 {

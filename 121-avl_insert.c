@@ -1,12 +1,12 @@
 #include "binary_trees.h"
 
 /**
- * avl_insert_full - Inserts a value
+ * avl_insert_full - avl insert
  *
- * @tree: pointer to the root
- * @parent: parent of node
- * @value: the value
- * Return: pointer to the new_node node
+ * @tree: pointer
+ * @parent: parent
+ * @value: value
+ * Return: new node
  */
 avl_t *avl_insert_full(avl_t *tree, avl_t *parent, int value)
 {
@@ -31,11 +31,11 @@ avl_t *avl_insert_full(avl_t *tree, avl_t *parent, int value)
 
 
 /**
- * val_balancer - rebalance an AVL tree if needed
+ * val_balancer - val balancer
  *
- * @root: pointer to the root of the tree
- * @tree: pointer to the node to be rebalanced
- * @value: inserted value
+ * @root: pointer
+ * @tree: pointer
+ * @value: value
  * Return: 0
  */
 
@@ -80,11 +80,11 @@ void val_balancer(avl_t **root, avl_t *tree, int value)
 
 
 /**
- * avl_insert - Insets the value in avl
+ * avl_insert - avl
  *
- * @tree: double pointer to root
- * @value: the value
- * Return: pointer to the new node
+ * @tree: double pointer
+ * @value: value
+ * Return: pointer to new node
  */
 avl_t *avl_insert(avl_t **tree, int value)
 {

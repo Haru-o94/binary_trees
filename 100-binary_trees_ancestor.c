@@ -1,10 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * binary_trees_ancestor - Finds the lowes
- * @first: Pointer
- * @second: Pointer
- *
+ * binary_trees_ancestor - ancestor tree
+ * @first: first pointer
+ * @second: secend pointer
  * Return: Pointer
  */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,

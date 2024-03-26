@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height_aux -  a tree
- * @tree: Pointer to
- * Return: Trees
+ * binary_tree_height_aux -  tree height
+ * @tree: Pointer to tree
+ * Return: tree
  */
 size_t	binary_tree_height_aux(const binary_tree_t *tree)
 {
@@ -22,10 +22,10 @@ size_t	binary_tree_height_aux(const binary_tree_t *tree)
 }
 
 /**
- * print_level_order - print each
- * @tree: pointer to thse
- * @level: level of the tree
- * @func: pointer to a  node
+ * print_level_order - level order
+ * @tree: tree
+ * @level: level
+ * @func:  func node
  * Return: void
  */
 void print_level_order(const binary_tree_t *tree, int level, void (*func)(int))
@@ -43,10 +43,9 @@ void print_level_order(const binary_tree_t *tree, int level, void (*func)(int))
 }
 
 /**
- * binary_tree_levelorder - function that goes through a
- * binary tree using level-order traversal
- * @tree: pointer to the root node of the tree to traverse
- * @func: pointer to a function to call for each node
+ * binary_tree_levelorder - levlorder tree
+ * @tree: pointer to the root
+ * @func: pointer to a function
  * Return: void
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))

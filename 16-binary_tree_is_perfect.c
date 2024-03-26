@@ -1,10 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * compare_depth - compare size
- *
+ * compare_depth - compare size in depth
  * @tree: pointer to the root
- * Return: size
+ * Return: return size
  */
 int compare_depth(const binary_tree_t *tree)
 {
@@ -15,10 +14,9 @@ int compare_depth(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_is_perfect - function that checks if a binary tree is perfect
- *
- * @tree: pointer to the root node of the tree to check
- * Return: 0
+ * binary_tree_is_perfect - function that checks
+ * @tree: pointer to the root node
+ * Return: 0 otherwise 1
  */
 
 int binary_tree_is_perfect(const binary_tree_t *tree)

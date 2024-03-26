@@ -1,10 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_rotate_left -  a left rotation
- * @tree: Pointerroot
- *
- * Return: Pointer  root
+ * binary_tree_rotate_left -  rotate left tree
+ * @tree: Pointer root of tree
+ * Return:null otherwise tree or parent
  */
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 {

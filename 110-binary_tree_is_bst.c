@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * isBST - Compare node in order to check if a given
+ * isBST - compare in order
  *
- * @tree: pointer to the root node of the tree to check
+ * @tree: pointer to the root node in tree
  * @min: min value
  * @max: max value
  *
@@ -24,9 +24,9 @@ int isBST(const binary_tree_t *tree, int min, int max)
 }
 
 /**
- * binary_tree_is_bst - checks if a binary tree is a valid Binary Search tree
+ * binary_tree_is_bst - binary tree if vaild
  *
- * @tree: pointer to the root node of the tree to check
+ * @tree: pointer to the root
  * Return: 1 if success, 0 otherwise
  */
 int binary_tree_is_bst(const binary_tree_t *tree)

@@ -4,11 +4,11 @@ heap_t *heap_nf(heap_t *root, size_t number);
 heap_t *heap_r(heap_t *new, heap_t *parent);
 
 /**
- * heap_insert - heap inserter
+ * heap_insert - heap insert
  *
- * @tree: double pointer to root
- * @value: the value to store
- * Return: pointer to the created node
+ * @tree: double
+ * @value: value
+ * Return: created node
  */
 heap_t *heap_insert(heap_t **tree, int value)
 {
@@ -51,10 +51,10 @@ heap_t *heap_insert(heap_t **tree, int value)
 }
 
 /**
- * bts - measure the tree
+ * bts - bts tree
  *
  * @tree: pointer to root
- * Return: size, otherwise 0
+ * Return: size
  */
 
 size_t bts(const binary_tree_t *tree)
@@ -65,11 +65,11 @@ size_t bts(const binary_tree_t *tree)
 }
 
 /**
- * heap_nf - heap node finder
+ * heap_nf - nf heap
  *
- * @root: pointer to the root
- * @number: index of the node to find
- * Return: pointer to the node
+ * @root: pointer
+ * @number: index
+ * Return: the node
  */
 heap_t *heap_nf(heap_t *root, size_t number)
 {
@@ -87,9 +87,9 @@ heap_t *heap_nf(heap_t *root, size_t number)
 }
 
 /**
- * heap_r - heap rebalancer
- * @new: pointer to the new node
- * @parent: pointer to the new parent
+ * heap_r - heap rebalnce
+ * @new: new node
+ * @parent: new parent
  * Return: parent
  */
 heap_t *heap_r(heap_t *new, heap_t *parent)
